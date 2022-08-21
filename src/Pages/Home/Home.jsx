@@ -1,13 +1,15 @@
 import React from 'react';
+import Navbar from '../../Components/Navbar/Navbar';
+import Feature from '../../Components/Feature/Feature';
 import './Home.scss'
-import AcUnitIcon from '@mui/icons-material/AcUnit';
+
 const Home = () => {
     return (
         <div className='Home'>
-            Hello !!
-            <AcUnitIcon />
+           <Navbar />
+           <Feature />
         </div>
-    );
-};
+    )
+}
 
 export default Home;
