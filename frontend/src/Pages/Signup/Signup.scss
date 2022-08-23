@@ -1,0 +1,97 @@
+@import "../../App.scss";
+
+.Signup {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 30%,
+            rgba(0, 0, 0, 1) 100%),
+        // url("https://w0.peakpx.com/wallpaper/144/83/HD-wallpaper-dune-2020-cool-minimalist-movies.jpg");
+        // url("https://wallpaperaccess.com/full/1512223.jpg");
+        // url("https://c4.wallpaperflare.com/wallpaper/88/698/360/space-black-hole-interstellar-planet-wallpaper-preview.jpg");
+        // url('https://images6.alphacoders.com/116/1166940.jpg');
+        // url('https://images6.alphacoders.com/119/1196351.jpg');
+        url('https://images8.alphacoders.com/116/1165243.jpg');
+
+
+    position: relative;
+    background-size: cover;
+
+    .top {
+        .wrapper {
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo {
+                height: 40px;
+            }
+
+            .loginButton {
+                background-color: rgb(221, 32, 32);
+                color: #FFFFFF;
+                padding: 5px 15px;
+                font-size: 16px;
+                border: none;
+                border-radius: 5px;
+                font-weight: 500;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        color: $text-w;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        h2 {
+            margin: 20px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .input {
+            margin-top: 20px;
+            width: 50%;
+            background-color: $text-w;
+            height: 50px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            input {
+                flex: 9;
+                height: 100%;
+                border: none;
+                padding: 0 15px;
+                outline: none;
+            }
+
+            .registerButton{
+                flex: 3;
+                border: none;
+                height: 100%;
+                background-color:rgb(221, 32, 32);
+                color: $text-w;
+                font-size: 18px;
+                cursor: pointer;
+            }
+        }
+    }
+}
