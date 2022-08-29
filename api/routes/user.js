@@ -90,16 +90,16 @@ router.get('/findone/:id', isPermitted, async (req, res) => {
 })
 
 //get users count accroding to month
-router.get('/user-states', async (req, res) => {
-    const today = new Date()
-    const lastYear = today.getFullYear() - 1
-    const monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+router.get('/user-states', isPermitted, async (req, res) => {
+    // const today = new Date()
+    // const lastYear = today.getFullYear() - 1
+    // const monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     try {
         const user = await User.aggregate([
             { $project: { whichMonth: { $month: "$createdAt" } } },
-            { $group: { _id: "$whichMonth", total: { $sum: 1 } } }
+            { $group: { _id: "$whichMonth", total: { $sum: 1 } } },
         ])
-        res.status(200).json({ status: true, user, message: "profile found" })
+        res.status(200).json({ status: true, user, message: "user states fetched" })
     } catch (error) {
         res.status(500).json(error.message)
     }
